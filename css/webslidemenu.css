@@ -1,0 +1,448 @@
+/*--------------------------------------------------------------------------
+[Table of contents]
+
+01 Base CSS
+02 Desktop CSS
+03 Tab CSS
+04 Mobile CSS
+05 Additional Themes (Optionnal)
+--------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------
+|  01  Base CSS
+--------------------------------------------------------------------------*/
+
+.wsfullmain html,
+.wsfullmain body,
+.wsfullmain iframe,
+.wsfullmain h1,
+.wsfullmain h2,
+.wsfullmain h3,
+.wsfullmain h4,
+.wsfullmain h5,
+.wsfullmain h6 {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font: inherit;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: antialiased;
+  font-smooth: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  font-smoothing: subpixel-antialiased !important;
+  font-smooth: subpixel-antialiased;
+}
+  .main-navigation-title {
+    position: relative;
+	color: #a0a3af;
+    font-family: 'Titillium Web',sans-serif;
+	font-weight: 700;
+    font-size: 2.5rem;
+	position: absolute;
+	left: 1.9em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+.main-navigation-title:before {
+    height: 2px;
+    width: 50px;
+    content: '';
+    position: absolute;
+    top: -.35rem;
+    left: 0.05em;
+    background: #a0a3af;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wsfullmain .cl {
+  clear: both;
+}
+
+.wsfullmain .clearfix:before,
+.wsfullmain .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.wsfullmain .clearfix:after {
+  clear: both;
+}
+
+.wsfullmain .clearfix {
+  zoom: 1;
+
+}
+}
+
+.wsfullmain textarea {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.wsfullmain img,
+object,
+embed,
+video {
+  border: 0 none;
+  max-width: 100%;
+}
+
+.wsfullmain a:focus {
+  outline: none !important;
+}
+
+.wsfullmain:before,
+.wsfullmain:after {
+  content: "";
+  display: table;
+}
+
+.wsfullmain:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------------------
+|  02 Desktop CSS
+--------------------------------------------------------------------------*/
+
+.wsfullmain {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  z-index: 10;
+  display: none;
+}
+
+.wsfullmain .wsnavitem {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  list-style: none;
+  display: block;
+}
+
+.wsfullmain .wsnavitem>li {
+  height: 100vh;
+  display: block;
+  text-align: center;
+  list-style: none;
+  font-size: 16px;
+  width: 20%;
+  float: left;
+}
+
+.wsfullmain .wsnavitem>li .wsfinnerdiv {
+  width: 0px;
+  height: 100%;
+  background: #161f24;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all cubic-bezier(.165, .84, .44, 1) .1s;
+  padding-top: 58%;
+}
+
+.wsfullmain .wsnavitem>li .wsfinnerdiv:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  font-size: 15px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  -webkit-transition: opacity .3s, background-color .3s;
+  transition: opacity .3s, background-color .3s
+}
+
+.wsfullmain .wsnavitem>li .wsfinnerdiv:hover:before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.wsfullmain .wsnavitem>li .wsfinnerdiv.wsfpartbg01 {
+    background: center;
+	padding-bottom: 100px;
+}
+
+.wsfullmain .wsnavitem>li .wsfinnerdiv:hover.wsfpartbg01:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  font-size: 15px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.80);
+}
+
+.wslinkstyle {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  padding-top: 15%;
+  
+}
+
+.wslinkstyle li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wslinkstyle li a {
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1em!important;
+  letter-spacing: 0.1em;
+  padding: 16px 25px;
+  padding-left: 50px;
+  text-align: left;
+  border-top: solid 1px rgba(255, 255, 255, 0.0);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.0);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.wslinkstyle li a span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #0f7c67;
+  content: attr(data-hover);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: translateX(-100%);
+}
+
+.wslinkstyle li a span em {
+  position: relative;
+  z-index: 100;
+  font-style: normal;
+}
+
+.wslinkstyle li a:hover span em {
+  color: #a08c5b;
+    font-weight: 600;
+}
+
+
+.wslinkstyle li a:hover span:before,
+.wslinkstyle li a:focus span:before {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  transform: translateX(0%);
+  color: #404040;
+}
+
+
+
+
+.wsfreadmore {
+  width: 100%;
+  position: absolute;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+  background-color: #fff;
+  top: 0px;
+  height: 120px;
+  color: #000;
+  padding: 51px 0px;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  left: 0;
+  font-size: 21px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+  line-height: 21px;
+}
+
+.wsfinnerdiv.wsfpartbg01:hover .wsfreadmore {
+  -webkit-transition: .3s -webkit-transform, .3s background-color;
+  transition: .3s transform, .3s background-color;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  top: 0px;
+  background: transparent linear-gradient(to left, rgba(31, 126, 232, 1) 0%, rgba(4, 227, 182, 0.75) 100%) repeat scroll 0% 0%;
+  border-bottom: solid 5px rgba(0, 0, 0, 0.80);
+
+}
+
+.wsfvisible .wsfullmain {
+  display: block;
+}
+
+.wsfanimated .wsfullmain .wsnavitem>li .wsfinnerdiv {
+  width: 100%;
+}
+
+/*Color Animation*/
+
+.wsfanimatedcolors {
+  background: linear-gradient(233deg, #fb5f65, #f7c66d, #6fce6f, #49a5ea, #9b6de3);
+  background-size: 1000% 1000%;
+  -webkit-animation: wsgdrcolors 30s ease infinite;
+  -moz-animation: wsgdrcolors 30s ease infinite;
+  animation: wsgdrcolors 30s ease infinite;
+}
+
+@-webkit-keyframes wsgdrcolors {
+  0% {
+    background-position: 0% 90%
+  }
+
+  50% {
+    background-position: 100% 11%
+  }
+
+  100% {
+    background-position: 0% 90%
+  }
+}
+
+@-moz-keyframes wsgdrcolors {
+  0% {
+    background-position: 0% 90%
+  }
+
+  50% {
+    background-position: 100% 11%
+  }
+
+  100% {
+    background-position: 0% 90%
+  }
+}
+
+@keyframes wsgdrcolors {
+  0% {
+    background-position: 0% 90%
+  }
+
+  50% {
+    background-position: 100% 11%
+  }
+
+  100% {
+    background-position: 0% 90%
+  }
+}
+/*Color Animation*/
+
+/*--------------------------------------------------------------------------
+|  03 Tab CSS
+--------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1271px) {
+	.wslinkstyle li a {
+
+  font-size: 0.8em!important;
+
+}
+}
+
+@media only screen and (max-width: 1111px) {
+	.wslinkstyle li a {
+
+  font-size: 0.7em!important;
+
+}
+}
+/*Color Animation*/
+
+/*--------------------------------------------------------------------------
+|  04 Mobile CSS
+--------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 880px) {
+
+  #hamburger--slider {
+    top: 5px;
+    right: 20px;
+  }
+
+  #hamburger--slider {
+    top: 5px;
+    right: 20px;
+  }
+  .wsfvisible .wsfullmain {
+	height: 100%;
+    overflow-y: scroll;
+    display: block;
+    position: fixed;
+  }
+
+  .wsfullmain .wsnavitem>li {
+    width: 100%;
+    float: none;
+	font-size: 30px;
+  }
+
+  .wsfullmain .wsnavitem>li .wsfinnerdiv {
+    width: 100%;
+    background-size: cover !important;
+    padding-top: 75px;
+  }
+
+  .wsfullmain {
+    position: absolute;
+
+
+  }
+  .wsfullmain .wsnavitem>li .wsfinnerdiv:before {
+
+  }
+..wsfullmain::after{
+background: rgba(0,0,0,0.5);
+}
+
+  .wsfullmain .wsnavitem>li {
+    height: auto;
+  }
+
+
+  .wsfreadmore {
+    height: 72px;
+    padding: 24px 25px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .wsfinnerdiv.wsfpartbg01 .wsfreadmore {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    top: 0px;
+    background: transparent linear-gradient(to left, rgba(31, 126, 232, 1) 0%, rgba(4, 227, 182, 0.75) 100%) repeat scroll 0% 0%;
+    border-bottom: solid 5px rgba(0, 0, 0, 0.80);
+
+  }

@@ -1,0 +1,141 @@
+.campaign-row {
+    min-height: 200px;
+    padding: 0px;
+    background: #242424;
+    border-top: 1px solid #85703a;
+    border-left: 1px solid #85703a;
+    margin-top: 0px;
+}
+
+.event-row {
+    min-height: 100px;
+    padding: 0px;
+    background: #242424;
+    border-top: 1px solid #85703a;
+    border-left: 1px solid #85703a;
+    margin-top: 0px;
+}
+
+.campaign-row-title {
+    background:#000000a8;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    padding-top: 20px;
+    min-height: 200px;
+}
+
+.event-row-title {
+    background:#000000a8;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    padding-top: 20px;
+    min-height: 100px;
+}
+
+.event-title {
+    color: #85703a;
+    font-size: 38px;
+    font-weight: bold;
+    mix-blend-mode: inherit;
+    text-shadow: 1px 1px 2px black;
+    line-height: 0.8;
+}
+
+.campaign-title {
+    color: #85703a;
+    font-size: 44px;
+    font-weight: bold;
+    mix-blend-mode: inherit;
+    text-shadow: 1px 1px 2px black;
+    line-height: 0.8;
+}
+
+.operation-slots {
+    color: #d9d9d9;
+    font-size: 24px;
+    mix-blend-mode: hard-light;
+}
+
+.campaign-flag {
+    background: black;
+    background-blend-mode: overlay !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.8;
+    border: 0px;
+}
+
+.actions-row {
+    background: transparent;
+}
+
+.operation-right {
+    position: initial;
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.event-right {
+    position: initial;
+    text-align: right;
+    margin-top: 17px;
+    margin-bottom: 0px;
+}
+
+.operation-attributes {
+    margin-left: 0px;
+    margin: 2px;
+    opacity: 0.8;
+}
+
+.campaign-button {
+    display: inline-block !important;
+    background-color: #323844;
+    color: #dedbdb;
+    padding: 22px;
+    margin-top: 0px;
+}
+
+.campaign-button-wrap {
+    padding: 0px;
+}
+
+.deploy-buttons {
+    display: inline-block;
+}
+
+.deploy-buttons-inner {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.deploy-button-group {
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    right: 7px;
+    bottom: 9px;
+    text-align: right;
+}
+
+.op-actions {
+    background: #272b36;
+    border-color: #252529;
+    inline-size: auto;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0.9;
+    margin: 1px;
+}

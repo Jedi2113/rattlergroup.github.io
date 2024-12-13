@@ -1,0 +1,168 @@
+/* globalfooter styles */
+
+@import url('../../../fonts/rv7/armyicons/armyicons.css');
+
+/* sets background color and allows space for footer */
+html.glblftr {
+    border-bottom: 225px solid var(--armyblack);
+}
+/* sets min height for global footer */
+html.glblftr body {
+    min-height:100vh;
+}
+
+html.glblftr footer {
+    font-family: GI,'GIfont', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    height: 225px;
+    box-sizing: border-box;
+    z-index: -2;
+}
+
+html.glblftr footer a {
+    outline: 0 none;
+}
+
+/* SOCIAL BUTTONS */
+
+html.glblftr footer .social {
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #fff;
+    text-align: center;
+}
+html.glblftr footer .social ul {
+	margin:0px;
+	padding:0px;
+	line-height: 0;
+}
+
+html.glblftr footer .social .social-button {
+    display: inline-block;
+    padding: 3px 3%;
+}
+
+html.glblftr footer .social .social-button a {
+    display: block;
+    width: 37px;
+	padding-top: 100%;
+	position:relative;
+    color:#fff;
+	transition: color .3s ease-in-out;
+}
+html.glblftr footer .social .social-button a:hover {
+    color: var(--armygold);
+}
+html.glblftr footer .social .social-button a::before {
+    font-family: 'armyicons';
+    font-size: 25px;
+    line-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+html.glblftr footer .social-button span {
+    display:none;
+}
+
+html.glblftr footer .social-button.facebook-button a::before {
+	content: "\ea90";
+}
+
+html.glblftr footer .social-button.twitter-button a::before {
+	content: "\e979";
+}
+
+html.glblftr footer .social-button.flickr-button a::before {
+	content: "\eaa5";
+}
+
+html.glblftr footer .social-button.youtube-button a::before {
+    content: "\ea9d";
+}
+
+html.glblftr footer .social-button.email-button a::before {
+    content: "\e95f";
+}
+
+html.glblftr footer .social-button.instagram-button a::before {
+    content: "\ea92";
+}
+
+html.glblftr footer .social-button.linkedin-button a::before {
+	content: "\eaca";
+}
+
+html.glblftr footer .social-button.rss-button a::before {
+    content: "\e974";
+}
+
+@media (min-width: 481px) {
+    html.glblftr footer .social .social-button {
+        padding: 3px 20px;
+    }
+}
+
+@media (max-width: 481px) {
+html.glblftr footer .social .social-button {
+    display: inline-block;
+    padding: 0px;
+}
+}
+
+/* FOOTER BOTTOM LINKS */
+
+html.glblftr footer .footer-bottom {
+    font-size: .84em;
+	font-weight: 600;
+    padding: 20px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+html.glblftr footer .footer-bottom ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+html.glblftr footer .footer-bottom ul a {
+    color: #fff;
+    display: inline-block;
+    line-height: 2em;
+    position: relative;
+    text-decoration: none;
+}
+
+html.glblftr footer .footer-bottom ul li a:after {
+    background: #fff;
+    bottom: 2px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: width .25s ease;
+    width: 0
+}
+
+html.glblftr footer .footer-bottom ul li a:focus:after,
+html.glblftr footer .footer-bottom ul li a:hover:after {
+    width: 100%;
+}
+
+footer section {
+    background: transparent;
+    padding:0px;
+}

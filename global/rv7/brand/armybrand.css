@@ -1,0 +1,137 @@
+/* COLORS */ 
+
+:root {
+
+      /* OFFICIAL BRAND PRIMARY */ 
+
+    --armygold: #FFCC01;
+    --armyblack: #221F20;
+    --armygreen: #2F372F;
+    --armywhite: #FFFFFF;
+
+    /* BRAND SECONDARY */ 
+
+    --armyaccenttan: #F1E4C7;
+    --armyaccentfield01: #727365;
+    --armyaccentfield02: #BFB8A6; 
+    --armyaccentgrey01: #565557;
+    --armyaccentgrey02: #D5D5D7;
+
+    /* ARMY.MIL INTERACTIVE */
+
+    --armylink: #0071bb;
+    --core-darkblue: #00558c;
+    --core-lightblue: #a6cde7;
+    --core-lighterblue: #d9eaf5;
+    --core-darkgold: #f9b21b;
+    --core-lightgold: #ffeab3;
+    --core-lightergold: #fff6df;
+    --core-darkgreen: #007326;
+    --core-green: #009933;
+    --core-lightgreen: #a6dbb8;
+    --core-lightergreen: #d9f0e1;
+    --core-darkred: #990000;
+    --core-red: #cc0000;
+    --core-lightred: #eda6a6;
+    --core-lighterred: #f7d9d9;
+
+
+     /* ARMY.MIL GREY ACCENTS */ 
+
+    --greyscaleaccent100: #030000;
+    --greyscaleaccent90: #1A1A1A;
+    --greyscaleaccent80: #333333;
+    --greyscaleaccent70: #4C4C4C;
+    --greyscaleaccent60: #666666;
+    --greyscaleaccent50: #7F7F7F;
+    --greyscaleaccent40: #999999;
+    --greyscaleaccent30: #B3B3B3;
+    --greyscaleaccent20: #CCCCCC;
+    --greyscaleaccent10: #E5E5E5;
+
+     /* ARMY SPECIAL USE */ 
+
+    --armyhighlightorange: #F16521;
+    --armyhighlightgreen: #2Daa27;
+    --armyhighlightred: #CF0000;
+
+    /* MOH COLORS */ 	
+	  
+	  --mohblue: #3f6bb3;
+	  --mohdarkblue: #32548d;
+	  --mohgreen: #c3b58f;
+	  --mohpostnam: #22396b;
+	  --mohvietnam: #555847;
+	  --mohww1: #665a40;
+	  --mohww2: #e4e4e4;
+	  --mohkorea: #c4c0b2;
+	  --mohcivilwar: #394d68;
+	  --mohgold: #bfc79d;
+}
+
+/* TYPOGRAPHY */ 
+
+body {
+    font-family: "GI","GIfont", Arial, Helvetica, sans-serif; 
+}
+
+p { font-weight: 400; font-size: 1em; line-height: 1.625; }
+p.small { font-weight: 400; font-size: 0.875em; line-height:1.5em; }
+
+H1 { font-weight:600; font-size: 3em; line-height:1.25em; }
+H2 { font-weight:700; font-size: 2.5em; line-height:1.25em; }
+H3 { font-weight:700; font-size: 2.25em; line-height:1.33em; }
+H4 { font-weight:700; font-size: 1.5em; line-height:1.5em; }
+H5 { font-weight:700; font-size: 1.125em; line-height:1.4em; }
+
+
+header .navbar .navbar-container {
+    background: var(--armyblack);
+    border-bottom: .5em solid var(--armygold);
+    height: 3.75em;
+}
+header .nav-army-star {
+    background: var(--armyblack);
+    border-radius: 0px;
+    left: 50%;
+    line-height: 0;
+    position: absolute;
+    width: 40%;
+    max-width: 225px;
+    height: 68px;
+    box-sizing: border-box;
+    padding: .5% 1% 0 1%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    /* border: 1px solid red; */
+}
+.nav-army-star span {
+    background: transparent url('army_logo_horiz.svg');
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    display: block;
+    min-height: 38px;
+    width: 100%;
+    padding: .5% 1% 1% 1%;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+    /* border: 1px solid red; */ 
+}
+header .nav-army-star:hover {
+    max-width: 250px;
+    height: 78px;
+}
+header .nav-army-star:hover span {
+    padding: 1% 1% 1.5% 1%;
+    /* border: 1px solid red; */
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 800px) {
+    .nav-army-star span {
+        background-position: center center;
+    }
+  }

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Rattler Group</title>
+<meta name="description" content="Review your cart, enter a delivery address, and see estimated tax before ordering from Rattler Group.">
+<link rel="icon" href="/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand-mark">
+      <img src="/images/rattler-logo-trans.png" alt="Rattler Group logo">
+      Rattler Group
+    </a>
+    <nav class="main-nav">
+      <a href="/products/" class="active">Products</a>
+      <a href="/classes/">Classes</a>
+      <a href="/about/">About</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="cart-toggle" aria-label="Open cart" aria-expanded="false">
+      Cart <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Checkout</span>
+    <h1>Review &amp; Delivery</h1>
+    <p>Confirm your order, enter a delivery address, and see estimated tax. No payment is collected here.</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container">
+
+    <div id="checkout-empty" class="checkout-empty" hidden>
+      <p>Your cart is empty.</p>
+      <a href="/products/" class="btn btn-solid">Browse Products</a>
+    </div>
+
+    <form id="checkout-form" class="checkout-grid">
+      <div class="checkout-main">
+
+        <div class="checkout-panel">
+          <h3>Order Review</h3>
+          <div id="checkout-items" class="checkout-items"></div>
+        </div>
+
+        <div class="checkout-panel">
+          <h3>Delivery Address</h3>
+          <div class="form-row">
+            <label>
+              Full Name
+              <input type="text" name="fullName" required autocomplete="name">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="form-row-full">
+              Address Line 1
+              <input type="text" name="address1" required autocomplete="address-line1">
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="form-row-full">
+              Address Line 2 <span class="optional">(optional)</span>
+              <input type="text" name="address2" autocomplete="address-line2">
+            </label>
+          </div>
+          <div class="form-row form-row-3">
+            <label>
+              City
+              <input type="text" name="city" required autocomplete="address-level2">
+            </label>
+            <label>
+              State
+              <select name="state" id="state-select" required autocomplete="address-level1">
+                <option value="" disabled selected>Select</option>
+              </select>
+            </label>
+            <label>
+              ZIP Code
+              <input type="text" name="zip" id="zip-input" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code">
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="checkout-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="sum-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping (USPS)<span id="sum-shipping-detail"></span></span>
+          <span id="sum-shipping">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Tax<span id="sum-tax-rate"></span></span>
+          <span id="sum-tax">$0.00</span>
+        </div>
+        <div class="summary-row summary-total">
+          <span>Total</span>
+          <span id="sum-total">$0.00</span>
+        </div>
+        <button type="submit" class="btn btn-solid checkout-submit">Place Order</button>
+        <p class="checkout-disclaimer">Demo checkout — no payment is processed and no order is placed.</p>
+        <div id="checkout-notice" class="checkout-notice" hidden></div>
+      </aside>
+    </form>
+
+  </div>
+</section>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+  <div class="cart-drawer-header">
+    <h3>Your Cart</h3>
+    <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cart-total">$0</span>
+    </div>
+    <a href="/checkout/" class="btn btn-solid cart-checkout">Checkout</a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="bulk-modal-overlay"></div>
+<div class="modal" id="bulk-modal" role="dialog" aria-modal="true" aria-labelledby="bulk-modal-title" hidden>
+  <h3 id="bulk-modal-title">Bulk Order?</h3>
+  <p>Contact us to arrange discounts and priority shipping.</p>
+  <div class="modal-actions">
+    <button type="button" class="btn btn-ghost" id="bulk-modal-dismiss">No Thanks</button>
+    <a href="mailto:info@rattler.group" class="btn btn-solid">Contact</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand-mark"><img src="/images/rattler-logo-trans.png" alt="Rattler Group"></a>
+        <p style="margin-top:1.2rem; max-width:280px;">We believe information is the key. Radios, programming, and comms training built to share that knowledge with every team.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/classes/">Classes</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/products/">Radios</a></li>
+          <li><a href="/products/">Programming</a></li>
+          <li><a href="/products/">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@rattler.group">info@rattler.group</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Rattler Group. All rights reserved.</span>
+      <span>Notitia est clavis</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+<script src="/js/bulk-modal.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/checkout.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

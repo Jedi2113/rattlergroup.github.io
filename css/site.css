@@ -1,6 +1,6 @@
 /* ==========================================================================
    Rattler Group — Site Stylesheet
-   Grayscale, tactical, minimal. See /brand for full guidelines.
+   Grayscale, disciplined, minimal. See /brand for full guidelines.
    ========================================================================== */
 
 :root {
@@ -498,6 +498,13 @@ section { padding: 6.5rem 0; }
 }
 .value-list li:last-child { border-bottom: 1px solid var(--gray-800); }
 .value-list .mark { font-family: var(--font-display); color: var(--gray-700); font-size: 1.4rem; }
+
+/* ---------- Testimonials ---------- */
+.testimonial-card { display: flex; flex-direction: column; justify-content: space-between; }
+.testimonial-quote { font-size: 1rem; color: var(--gray-200); margin-bottom: 1.6rem; }
+.testimonial-attribution { display: flex; flex-direction: column; gap: 0.3rem; }
+.testimonial-name { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; color: var(--white); }
+.testimonial-tag { font-size: 0.78rem; color: var(--gray-500); }
 
 /* ---------- Checkout ---------- */
 .checkout-empty { text-align: center; padding: 4rem 0 6rem; }
